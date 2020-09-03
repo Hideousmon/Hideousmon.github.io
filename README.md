@@ -2,7 +2,7 @@
 
 Link: [https://Hideousmon.github.io](https://hideousmon.github.io/)
 
-### Desciption
+### Description
 
 Some daily recordings for my Research & Study.
 
