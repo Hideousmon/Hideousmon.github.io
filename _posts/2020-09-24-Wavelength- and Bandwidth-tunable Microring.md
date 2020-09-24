@@ -47,7 +47,7 @@ author: Zhenyu ZHAO
 <center><img src="http://latex.codecogs.com/gif.latex? E_{i41}=E_{o31}*e^{i\phi_2} "/> <p align="right"> (14) </p> </center>
 
 
-### Calculate $E_{i12}$
+### Calculate Ei12
 
 Assuming ：
 <center><img src="http://latex.codecogs.com/gif.latex? E_{i31} = 0"/> </center>
@@ -77,7 +77,7 @@ E_{o22} = t_2^**(E_{o12}*e^ {i\theta_1})+k_2^* *(E_{o11}*e^{i\phi_1})\\
 <center><img src="http://latex.codecogs.com/gif.latex? E_{i12} = (t_4^**((k_3^* *((t_2^**((t_1^**E_{i12}+k_1^* *E_{i11})*e^ {i\theta_1})\\+k_2^* *((t_1 * E_{i11} + k_1*E_{i12})*e^{i\phi_1}))*e^{i\theta_2}))*e^{i\theta_3})\\+k_4^* *((k_3*((t_2^**((t_1^**E_{i12}+k_1^* *E_{i11})*e^ {i\theta_1})\\+k_2^* *((t_1 * E_{i11} + k_1*E_{i12})*e^{i\phi_1}))*e^{i\theta_2}))*e^{i\phi_2}))*e^{i\theta_4} "/> <p align="right"> (19) </p> </center>
 
 
-### Calculate $E_{o11}$ with $E_{i11}$
+### Calculate Eo11​ with Ei11
 
 #### 1. Solve Equation(19)
 <center><img src="http://latex.codecogs.com/gif.latex? E_{i12} = t_4^**k_3^* *t_2^**t_1^**E_{i12}*e^ {i\theta_1}*e^{i\theta_3}*e^{i\theta_4}\\
@@ -109,7 +109,7 @@ E_{o22} = t_2^**(E_{o12}*e^ {i\theta_1})+k_2^* *(E_{o11}*e^{i\phi_1})\\
 - t_4^**k_4^* *k_3*t_2^**k_2^* *k_1*e^{i\phi_1}*e^{i\theta_2}*e^{i\phi_2}*e^{i\theta_4}}"/> <p align="right"> (22) </p> </center>
 
 
-### Calculate $E_{o21}$ with $E_{i11}$
+### Calculate Eo21 with ​Ei11
 
 #### 1. Combine Equation(1)(2)(3)(9)(13)
 <center><img src="http://latex.codecogs.com/gif.latex? E_{o21} = (t_2 * t_1 *e^{i\phi_1}+k_2*k_1^* *e^ {i\theta_1})*E_{i11} + (t_2 * k_1*e^{i\phi_1} + k_2*t_1^**e^ {i\theta_1})*E_{i12}"/> <p align="right"> (23) </p> </center>
@@ -129,7 +129,7 @@ E_{o22} = t_2^**(E_{o12}*e^ {i\theta_1})+k_2^* *(E_{o11}*e^{i\phi_1})\\
 
 
 
-### Calculate $E_{o41}$ with $E_{i11}$
+### Calculate Eo41 with Ei11
 
 #### 1.Combine Equation(7)(11)(14)(16)(17)(19)
 <center><img src="http://latex.codecogs.com/gif.latex? E_{o41} =  t_4 *k_3*t_2^**t_1^**E_{i12}*e^ {i\theta_1}*e^{i\theta_2}*e^{i\phi_2}
