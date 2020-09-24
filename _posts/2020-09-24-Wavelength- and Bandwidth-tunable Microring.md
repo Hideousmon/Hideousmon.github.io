@@ -16,6 +16,7 @@ author: Zhenyu ZHAO
 
 ### Basic Equations for the coupling
 
+![](http://latex.codecogs.com/gif.latex?\\\tf_{t,d}=1+log(tf_{t,d}\))
 $$
 E_{o11} = t_1 * E_{i11} + k_1*E_{i12} \tag{1}
 $$
