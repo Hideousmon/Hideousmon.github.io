@@ -16,13 +16,13 @@ author: Zhenyu ZHAO
 
 ### Basic Equations for the coupling
 
+$$
+E_{o11} = t_1 * E_{i11} + k_1*E_{i12} \tag{1}
+$$
 
-$$E_{o11} = t_1 * E_{i11} + k_1*E_{i12} \tag{1}$$
-
-
-
-$$E_{o12}=t_1^**E_{i12}+k_1^* *E_{i11} \tag{2}$$
-
+$$
+E_{o12}=t_1^**E_{i12}+k_1^* *E_{i11} \tag{2}
+$$
 
 $$
 E_{o21} = t_2 * E_{i21} + k_2*E_{i22} \tag{3}
