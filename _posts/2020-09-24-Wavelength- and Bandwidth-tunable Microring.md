@@ -16,216 +16,156 @@ author: Zhenyu ZHAO
 
 ### Basic Equations for the coupling
 
-![](http://latex.codecogs.com/gif.latex?\\\tf_{t,d}=1+log(tf_{t,d}\))
-$$
-E_{o11} = t_1 * E_{i11} + k_1*E_{i12} \tag{1}
-$$
+<center><img src="http://latex.codecogs.com/gif.latex?E_{o11} = t_1 * E_{i11} + k_1*E_{i12}"/> (1) </center>
 
-$$
-E_{o12}=t_1^**E_{i12}+k_1^* *E_{i11} \tag{2}
-$$
+<center><img src="http://latex.codecogs.com/gif.latex? E_{o12}=t_1^**E_{i12}+k_1^* *E_{i11}"/> (2) </center>
 
-$$
-E_{o21} = t_2 * E_{i21} + k_2*E_{i22} \tag{3}
-$$
+<center><img src="http://latex.codecogs.com/gif.latex?E_{o21} = t_2 * E_{i21} + k_2*E_{i22}"/> (3) </center>
 
-$$
-E_{o22}=t_2^**E_{i22}+k_2^* *E_{i21} \tag{4}
-$$
+<center><img src="http://latex.codecogs.com/gif.latex?E_{o22}=t_2^**E_{i22}+k_2^* *E_{i21}"/> (4) </center>
 
-$$
-E_{o31} = t_3 * E_{i31} + k_3*E_{i32} \tag{5}
-$$
+<center><img src="http://latex.codecogs.com/gif.latex?E_{o31} = t_3 * E_{i31} + k_3*E_{i32}"/> (5) </center>
 
-$$
-E_{o32}=t_3^**E_{i32}+k_3^* *E_{i31} \tag{6}
-$$
+<center><img src="http://latex.codecogs.com/gif.latex?E_{o32}=t_3^**E_{i32}+k_3^* *E_{i31}"/> (6) </center>
 
-$$
-E_{o41} = t_4 * E_{i41} + k_4*E_{i42} \tag{7}
-$$
+<center><img src="http://latex.codecogs.com/gif.latex?E_{o41} = t_4 * E_{i41} + k_4*E_{i42}"/> (7) </center>
 
-$$
-E_{o42}=t_4^**E_{i42}+k_4^* *E_{i41} \tag{8}
-$$
+<center><img src="http://latex.codecogs.com/gif.latex?E_{o42}=t_4^**E_{i42}+k_4^* *E_{i41}"/> (8) </center>
 
 ### Transition Equations
 
-$$
-E_{i22} = E_{o12}*e^ {i\theta_1} \tag{9}
-$$
+<center><img src="http://latex.codecogs.com/gif.latex? E_{i22} = E_{o12}*e^ {i\theta_1} "/> (9) </center>
 
-$$
-E_{i32}=E_{o22}*e^{i\theta_2} \tag{10}
-$$
+<center><img src="http://latex.codecogs.com/gif.latex? E_{i32}=E_{o22}*e^{i\theta_2} "/> (10) </center>
 
-$$
-E_{i42}=E_{o32}*e^{i\theta_3} \tag{11}
-$$
+<center><img src="http://latex.codecogs.com/gif.latex? E_{i42}=E_{o32}*e^{i\theta_3} "/> (11) </center>
 
-$$
-E_{i12} = E_{o42}*e^{i\theta_4} \tag{12}
-$$
+<center><img src="http://latex.codecogs.com/gif.latex? E_{i12} = E_{o42}*e^{i\theta_4} "/> (12) </center>
 
-$$
-E_{i21} = E_{o11}*e^{i\phi_1} \tag{13}
-$$
+<center><img src="http://latex.codecogs.com/gif.latex? E_{i21} = E_{o11}*e^{i\phi_1} "/> (13) </center>
 
-$$
-E_{i41}=E_{o31}*e^{i\phi_2} \tag{14}
-$$
+<center><img src="http://latex.codecogs.com/gif.latex? E_{i41}=E_{o31}*e^{i\phi_2} "/> (14) </center>
 
-### Calculate Ei12
+
+### Calculate $E_{i12}$
 
 Assuming ：
-$$
-E_{i31} = 0
-$$
+<center><img src="http://latex.codecogs.com/gif.latex? E_{i31} = 0"/> </center>
 
 #### 1. Combine (2)(4)(9)(13)
 
-$$
-\begin{align}
-E_{o22} &= t_2^**(E_{o12}*e^ {i\theta_1})+k_2^* *(E_{o11}*e^{i\phi_1})\\
-&= t_2^**((t_1^**E_{i12}+k_1^* *E_{i11})*e^ {i\theta_1})+k_2^* *((t_1 * E_{i11} + k_1*E_{i12})*e^{i\phi_1}) \tag{15}
-\end{align}
-$$
+<center><img src="http://latex.codecogs.com/gif.latex? 
+E_{o22} = t_2^**(E_{o12}*e^ {i\theta_1})+k_2^* *(E_{o11}*e^{i\phi_1})\\
+= t_2^**((t_1^**E_{i12}+k_1^* *E_{i11})*e^ {i\theta_1})+k_2^* *((t_1 * E_{i11} + k_1*E_{i12})*e^{i\phi_1}) 
+"/> (15) </center>
+
+
 
 #### 2. Combine (6)(10)(15)
-
-$$
-\begin{align}
-E_{o32}&=k_3^* *((t_2^**((t_1^**E_{i12}+k_1^* *E_{i11})*e^ {i\theta_1})+k_2^* *((t_1 * E_{i11} + k_1*E_{i12})*e^{i\phi_1}))*e^{i\theta_2}) \tag{16}
-\end{align}
-$$
+<center><img src="http://latex.codecogs.com/gif.latex? E_{o32}=k_3^* *((t_2^**((t_1^**E_{i12}+k_1^* *E_{i11})*e^ {i\theta_1})\\+ k_2^* *((t_1 * E_{i11} + k_1*E_{i12})*e^{i\phi_1}))*e^{i\theta_2}) "/> (16) </center>
 
 #### 3. Combine (5)(10)(15)
+<center><img src="http://latex.codecogs.com/gif.latex? E_{o31} =  k_3*((t_2^**((t_1^**E_{i12}+k_1^* *E_{i11})*e^ {i\theta_1})\\+  k_2^* *((t_1 * E_{i11} + k_1*E_{i12})*e^{i\phi_1}))*e^{i\theta_2})"/> (17) </center>
 
-$$
-E_{o31} =  k_3*((t_2^**((t_1^**E_{i12}+k_1^* *E_{i11})*e^ {i\theta_1})+k_2^* *((t_1 * E_{i11} + k_1*E_{i12})*e^{i\phi_1}))*e^{i\theta_2}) \tag{17}
-$$
 
 #### 4. Combine (8)(11)(14)(16)(17)
+<center><img src="http://latex.codecogs.com/gif.latex?E_{o42} = t_4^**((k_3^* *((t_2^**((t_1^**E_{i12}+k_1^* *E_{i11})*e^ {i\theta_1})\\+k_2^* *((t_1 * E_{i11} + k_1*E_{i12})*e^{i\phi_1}))*e^{i\theta_2}))*e^{i\theta_3})\\+k_4^* *((k_3*((t_2^**((t_1^**E_{i12}+k_1^* *E_{i11})*e^ {i\theta_1})\\+k_2^* *((t_1 * E_{i11} + k_1*E_{i12})*e^{i\phi_1}))*e^{i\theta_2}))*e^{i\phi_2})"/> (18) </center>
 
-$$
-\begin{align}
-E_{o42} = t_4^**((k_3^* *((t_2^**((t_1^**E_{i12}+k_1^* *E_{i11})*e^ {i\theta_1})+k_2^* *((t_1 * E_{i11} + k_1*E_{i12})*e^{i\phi_1}))*e^{i\theta_2}))*e^{i\theta_3})\\+k_4^* *((k_3*((t_2^**((t_1^**E_{i12}+k_1^* *E_{i11})*e^ {i\theta_1})+k_2^* *((t_1 * E_{i11} + k_1*E_{i12})*e^{i\phi_1}))*e^{i\theta_2}))*e^{i\phi_2}) \tag{18}
-\end{align}
-$$
 
 #### 5. Combine (12)(18)
+<center><img src="http://latex.codecogs.com/gif.latex? E_{i12} = (t_4^**((k_3^* *((t_2^**((t_1^**E_{i12}+k_1^* *E_{i11})*e^ {i\theta_1})\\+k_2^* *((t_1 * E_{i11} + k_1*E_{i12})*e^{i\phi_1}))*e^{i\theta_2}))*e^{i\theta_3})\\+k_4^* *((k_3*((t_2^**((t_1^**E_{i12}+k_1^* *E_{i11})*e^ {i\theta_1})\\+k_2^* *((t_1 * E_{i11} + k_1*E_{i12})*e^{i\phi_1}))*e^{i\theta_2}))*e^{i\phi_2}))*e^{i\theta_4} "/> (19) </center>
 
-$$
-E_{i12} = (t_4^**((k_3^* *((t_2^**((t_1^**E_{i12}+k_1^* *E_{i11})*e^ {i\theta_1})+k_2^* *((t_1 * E_{i11} + k_1*E_{i12})*e^{i\phi_1}))*e^{i\theta_2}))*e^{i\theta_3})\\+k_4^* *((k_3*((t_2^**((t_1^**E_{i12}+k_1^* *E_{i11})*e^ {i\theta_1})+k_2^* *((t_1 * E_{i11} + k_1*E_{i12})*e^{i\phi_1}))*e^{i\theta_2}))*e^{i\phi_2}))*e^{i\theta_4} \tag{19}
-$$
 
-### Calculate Eo11 with Ei11
+### Calculate $E_{o11}$ with $E_{i11}$
 
 #### 1. Solve Equation(19)
-
-$$
-E_{i12} = t_4^**k_3^* *t_2^**t_1^**E_{i12}*e^ {i\theta_1}*e^{i\theta_3}*e^{i\theta_4}
+<center><img src="http://latex.codecogs.com/gif.latex? E_{i12} = t_4^**k_3^* *t_2^**t_1^**E_{i12}*e^ {i\theta_1}*e^{i\theta_3}*e^{i\theta_4}\\
 +t_4^**k_3^* *t_2^**k_1^* *E_{i11}*e^ {i\theta_1}*e^{i\theta_3}*e^{i\theta_4} \\
-+t_4^**k_3^* *k_2^* *t_1 * E_{i11}*e^{i\phi_1}*e^{i\theta_2}*e^{i\theta_3}*e^{i\theta_4} 
++t_4^**k_3^* *k_2^* *t_1 * E_{i11}*e^{i\phi_1}*e^{i\theta_2}*e^{i\theta_3}*e^{i\theta_4} \\
 +t_4^**k_3^* *k_2^* *k_1*E_{i12}*e^{i\phi_1}*e^{i\theta_2}*e^{i\theta_3}*e^{i\theta_4}\\
-+t_4^**k_4^* *k_3*t_2^**t_1^**E_{i12}*e^ {i\theta_1}*e^{i\theta_2}*e^{i\phi_2}*e^{i\theta_4}
++t_4^**k_4^* *k_3*t_2^**t_1^**E_{i12}*e^ {i\theta_1}*e^{i\theta_2}*e^{i\phi_2}*e^{i\theta_4}\\
 +t_4^**k_4^* *k_3*k_1^* *E_{i11}*e^ {i\theta_1}*e^{i\theta_2}*e^{i\phi_2}*e^{i\theta_4}\\
-+t_4^**k_4^* *k_3*t_2^**k_2^* *t_1 * E_{i11}*e^{i\phi_1}*e^{i\theta_2}*e^{i\phi_2}*e^{i\theta_4} 
-+t_4^**k_4^* *k_3*t_2^**k_2^* *k_1*E_{i12}*e^{i\phi_1}*e^{i\theta_2}*e^{i\phi_2}*e^{i\theta_4} \tag{20}
-$$
++t_4^**k_4^* *k_3*t_2^**k_2^* *t_1 * E_{i11}*e^{i\phi_1}*e^{i\theta_2}*e^{i\phi_2}*e^{i\theta_4} \\
++t_4^**k_4^* *k_3*t_2^**k_2^* *k_1*E_{i12}*e^{i\phi_1}*e^{i\theta_2}*e^{i\phi_2}*e^{i\theta_4} "/> (20) </center>
 
-$$
-(1-t_4^**k_3^* *t_2^**t_1^**e^ {i\theta_1}*e^{i\theta_3}*e^{i\theta_4} 
+<center><img src="http://latex.codecogs.com/gif.latex? (1-t_4^**k_3^* *t_2^**t_1^**e^ {i\theta_1}*e^{i\theta_3}*e^{i\theta_4} \\
 - t_4^**k_3^* *k_2^* *k_1*e^{i\phi_1}*e^{i\theta_2}*e^{i\theta_3}*e^{i\theta_4} \\
-- t_4^**k_4^* *k_3*t_2^**t_1^**e^ {i\theta_1}*e^{i\theta_2}*e^{i\phi_2}*e^{i\theta_4}
+- t_4^**k_4^* *k_3*t_2^**t_1^**e^ {i\theta_1}*e^{i\theta_2}*e^{i\phi_2}*e^{i\theta_4}\\
 - t_4^**k_4^* *k_3*t_2^**k_2^* *k_1*e^{i\phi_1}*e^{i\theta_2}*e^{i\phi_2}*e^{i\theta_4})*E_{i12} \\
-= (t_4^**k_3^* *t_2^**k_1^* *e^ {i\theta_1}*e^{i\theta_3}*e^{i\theta_4} 
+= (t_4^**k_3^* *t_2^**k_1^* *e^ {i\theta_1}*e^{i\theta_3}*e^{i\theta_4} \\
 + t_4^**k_3^* *k_2^* *t_1 *e^{i\phi_1}*e^{i\theta_2}*e^{i\theta_3}*e^{i\theta_4} \\
-+ t_4^**k_4^* *k_3*k_1^* *e^ {i\theta_1}*e^{i\theta_2}*e^{i\phi_2}*e^{i\theta_4}
-+ t_4^**k_4^* *k_3*t_2^**k_2^* *t_1 *e^{i\phi_1}*e^{i\theta_2}*e^{i\phi_2}*e^{i\theta_4})*E_{i11} \tag{21}
-$$
++ t_4^**k_4^* *k_3*k_1^* *e^ {i\theta_1}*e^{i\theta_2}*e^{i\phi_2}*e^{i\theta_4}\\
++ t_4^**k_4^* *k_3*t_2^**k_2^* *t_1 *e^{i\phi_1}*e^{i\theta_2}*e^{i\phi_2}*e^{i\theta_4})*E_{i11}"/> (21) </center>
 
-$$
-\frac{E_{i12}}{E_{i11}} = \frac{t_4^**k_3^* *t_2^**k_1^* *e^ {i\theta_1}*e^{i\theta_3}*e^{i\theta_4} 
+
+<center><img src="http://latex.codecogs.com/gif.latex? \frac{E_{i12}}{E_{i11}} = \frac{t_4^**k_3^* *t_2^**k_1^* *e^ {i\theta_1}*e^{i\theta_3}*e^{i\theta_4} 
 + t_4^**k_3^* *k_2^* *t_1 *e^{i\phi_1}*e^{i\theta_2}*e^{i\theta_3}*e^{i\theta_4} \\
 + t_4^**k_4^* *k_3*k_1^* *e^ {i\theta_1}*e^{i\theta_2}*e^{i\phi_2}*e^{i\theta_4}
 + t_4^**k_4^* *k_3*t_2^**k_2^* *t_1 *e^{i\phi_1}*e^{i\theta_2}*e^{i\phi_2}*e^{i\theta_4}}{1-t_4^**k_3^* *t_2^**t_1^**e^ {i\theta_1}*e^{i\theta_3}*e^{i\theta_4} 
 - t_4^**k_3^* *k_2^* *k_1*e^{i\phi_1}*e^{i\theta_2}*e^{i\theta_3}*e^{i\theta_4} \\
 - t_4^**k_4^* *k_3*t_2^**t_1^**e^ {i\theta_1}*e^{i\theta_2}*e^{i\phi_2}*e^{i\theta_4}
-- t_4^**k_4^* *k_3*t_2^**k_2^* *k_1*e^{i\phi_1}*e^{i\theta_2}*e^{i\phi_2}*e^{i\theta_4}} \tag{22}
-$$
+- t_4^**k_4^* *k_3*t_2^**k_2^* *k_1*e^{i\phi_1}*e^{i\theta_2}*e^{i\phi_2}*e^{i\theta_4}}"/> (22) </center>
 
-### Calculate Eo21 with Ei11
+### Calculate $E_{o21}$ with $E_{i11}$
 
 #### 1. Combine Equation(1)(2)(3)(9)(13)
+<center><img src="http://latex.codecogs.com/gif.latex? E_{o21} = (t_2 * t_1 *e^{i\phi_1}+k_2*k_1^* *e^ {i\theta_1})*E_{i11} + (t_2 * k_1*e^{i\phi_1} + k_2*t_1^**e^ {i\theta_1})*E_{i12}"/> (23) </center>
 
-$$
-E_{o21} = (t_2 * t_1 *e^{i\phi_1}+k_2*k_1^* *e^ {i\theta_1})*E_{i11} + (t_2 * k_1*e^{i\phi_1} + k_2*t_1^**e^ {i\theta_1})*E_{i12} \tag{23}
-$$
 
 #### 2. Combine Equation(22)(23)
-
-$$
-E_{o21} = (t_2 * t_1 *e^{i\phi_1}+k_2*k_1^* *e^ {i\theta_1})*E_{i11} + (t_2 * k_1*e^{i\phi_1} + k_2*t_1^**e^ {i\theta_1})*\frac{t_4^**k_3^* *t_2^**k_1^* *e^ {i\theta_1}*e^{i\theta_3}*e^{i\theta_4} 
+<center><img src="http://latex.codecogs.com/gif.latex? E_{o21} = (t_2 * t_1 *e^{i\phi_1}+k_2*k_1^* *e^ {i\theta_1})*E_{i11} + (t_2 * k_1*e^{i\phi_1} + k_2*t_1^**e^ {i\theta_1})*\frac{t_4^**k_3^* *t_2^**k_1^* *e^ {i\theta_1}*e^{i\theta_3}*e^{i\theta_4} 
 + t_4^**k_3^* *k_2^* *t_1 *e^{i\phi_1}*e^{i\theta_2}*e^{i\theta_3}*e^{i\theta_4} \\
 + t_4^**k_4^* *k_3*k_1^* *e^ {i\theta_1}*e^{i\theta_2}*e^{i\phi_2}*e^{i\theta_4}
 + t_4^**k_4^* *k_3*t_2^**k_2^* *t_1 *e^{i\phi_1}*e^{i\theta_2}*e^{i\phi_2}*e^{i\theta_4}}{1-t_4^**k_3^* *t_2^**t_1^**e^ {i\theta_1}*e^{i\theta_3}*e^{i\theta_4} 
 - t_4^**k_3^* *k_2^* *k_1*e^{i\phi_1}*e^{i\theta_2}*e^{i\theta_3}*e^{i\theta_4} \\
 - t_4^**k_4^* *k_3*t_2^**t_1^**e^ {i\theta_1}*e^{i\theta_2}*e^{i\phi_2}*e^{i\theta_4}
-- t_4^**k_4^* *k_3*t_2^**k_2^* *k_1*e^{i\phi_1}*e^{i\theta_2}*e^{i\phi_2}*e^{i\theta_4}}*E_{i11}
-$$
+- t_4^**k_4^* *k_3*t_2^**k_2^* *k_1*e^{i\phi_1}*e^{i\theta_2}*e^{i\phi_2}*e^{i\theta_4}}*E_{i11}"/> </center>
 
 
 
 
 
-### Calculate Eo41 with Ei11
+
+### Calculate $E_{o41}$ with $E_{i11}$
 
 #### 1.Combine Equation(7)(11)(14)(16)(17)(19)
-
-$$
-E_{o41} =  t_4 *k_3*t_2^**t_1^**E_{i12}*e^ {i\theta_1}*e^{i\theta_2}*e^{i\phi_2}
+<center><img src="http://latex.codecogs.com/gif.latex? E_{o41} =  t_4 *k_3*t_2^**t_1^**E_{i12}*e^ {i\theta_1}*e^{i\theta_2}*e^{i\phi_2}
 +t_4 *k_3*t_2^**k_1^* *E_{i11}*e^ {i\theta_1}*e^{i\theta_2}*e^{i\phi_2}\\
 +t_4 *k_3*k_2^* *t_1 * E_{i11}*e^{i\phi_1}*e^{i\theta_2}*e^{i\phi_2} 
 +t_4 *k_3*k_2^* *k_1*E_{i12}*e^{i\phi_1}*e^{i\theta_2}*e^{i\phi_2} \\
 +k_4*k_3^* *t_2^**t_1^**E_{i12}*e^ {i\theta_1}*e^{i\theta_2}*e^{i\theta_3}
 +k_4*k_3^* *t_2^**k_1^* *E_{i11}*e^ {i\theta_1}*e^{i\theta_2}*e^{i\theta_3}\\
 +k_4*k_3^* *k_2^* *t_1 * E_{i11}*e^{i\phi_1}*e^{i\theta_2}*e^{i\theta_3} 
-+k_4*k_3^* *k_2^* *k_1*E_{i12}*e^{i\phi_1}*e^{i\theta_2}*e^{i\theta_3} \tag{24}
-$$
++k_4*k_3^* *k_2^* *k_1*E_{i12}*e^{i\phi_1}*e^{i\theta_2}*e^{i\theta_3} "/> (24) </center>
 
-$$
-E_{o41} = (t_4 *k_3*t_2^**k_1^* *e^ {i\theta_1}*e^{i\theta_2}*e^{i\phi_2} 
+<center><img src="http://latex.codecogs.com/gif.latex?E_{o41} = (t_4 *k_3*t_2^**k_1^* *e^ {i\theta_1}*e^{i\theta_2}*e^{i\phi_2} 
 + t_4 *k_3*k_2^* *t_1 *e^{i\phi_1}*e^{i\theta_2}*e^{i\phi_2} \\
 + k_4*k_3^* *t_2^**k_1^* *e^ {i\theta_1}*e^{i\theta_2}*e^{i\theta_3} 
 + k_4*k_3^* *k_2^* *t_1 *e^{i\phi_1}*e^{i\theta_2}*e^{i\theta_3})*E_{i11} \\
 + (t_4 *k_3*t_2^**t_1^**e^ {i\theta_1}*e^{i\theta_2}*e^{i\phi_2}
 + t_4 *k_3*k_2^* *k_1*e^{i\phi_1}*e^{i\theta_2}*e^{i\phi_2}\\
 + k_4*k_3^* *t_2^**t_1^**e^ {i\theta_1}*e^{i\theta_2}*e^{i\theta_3}
-+ k_4*k_3^* *k_2^* *k_1*e^{i\phi_1}*e^{i\theta_2}*e^{i\theta_3})*E_{i12} \tag{25}
-$$
++ k_4*k_3^* *k_2^* *k_1*e^{i\phi_1}*e^{i\theta_2}*e^{i\theta_3})*E_{i12}"/> (25) </center>
 
 #### 2. Combine Equation(22)(24)
-
-$$
-E_{o41} = (t_4 *k_3*t_2^**k_1^* *e^ {i\theta_1}*e^{i\theta_2}*e^{i\phi_2} 
+<center><img src="http://latex.codecogs.com/gif.latex? E_{o41} = (t_4 *k_3*t_2^**k_1^* *e^ {i\theta_1}*e^{i\theta_2}*e^{i\phi_2} 
 + t_4 *k_3*k_2^* *t_1 *e^{i\phi_1}*e^{i\theta_2}*e^{i\phi_2} \\
-\ \\ 
 + k_4*k_3^* *t_2^**k_1^* *e^ {i\theta_1}*e^{i\theta_2}*e^{i\theta_3} 
 + k_4*k_3^* *k_2^* *t_1 *e^{i\phi_1}*e^{i\theta_2}*e^{i\theta_3})*E_{i11} \\
-\ \\ 
 + (t_4 *k_3*t_2^**t_1^**e^ {i\theta_1}*e^{i\theta_2}*e^{i\phi_2}
 + t_4 *k_3*k_2^* *k_1*e^{i\phi_1}*e^{i\theta_2}*e^{i\phi_2}\\
-\ \\ 
 + k_4*k_3^* *t_2^**t_1^**e^ {i\theta_1}*e^{i\theta_2}*e^{i\theta_3}
 + k_4*k_3^* *k_2^* *k_1*e^{i\phi_1}*e^{i\theta_2}*e^{i\theta_3}) \\
-\ \\ 
+"/> </center>
+
+<center><img src="http://latex.codecogs.com/gif.latex? 
 *\frac{t_4^**k_3^* *t_2^**k_1^* *e^ {i\theta_1}*e^{i\theta_3}*e^{i\theta_4} 
 + t_4^**k_3^* *k_2^* *t_1 *e^{i\phi_1}*e^{i\theta_2}*e^{i\theta_3}*e^{i\theta_4} \\
 + t_4^**k_4^* *k_3*k_1^* *e^ {i\theta_1}*e^{i\theta_2}*e^{i\phi_2}*e^{i\theta_4}
 + t_4^**k_4^* *k_3*t_2^**k_2^* *t_1 *e^{i\phi_1}*e^{i\theta_2}*e^{i\phi_2}*e^{i\theta_4}}{1-t_4^**k_3^* *t_2^**t_1^**e^ {i\theta_1}*e^{i\theta_3}*e^{i\theta_4} 
 - t_4^**k_3^* *k_2^* *k_1*e^{i\phi_1}*e^{i\theta_2}*e^{i\theta_3}*e^{i\theta_4} \\
 - t_4^**k_4^* *k_3*t_2^**t_1^**e^ {i\theta_1}*e^{i\theta_2}*e^{i\phi_2}*e^{i\theta_4}
-- t_4^**k_4^* *k_3*t_2^**k_2^* *k_1*e^{i\phi_1}*e^{i\theta_2}*e^{i\phi_2}*e^{i\theta_4}}*E_{i11} \tag{26}
-$$
+- t_4^**k_4^* *k_3*t_2^**k_2^* *k_1*e^{i\phi_1}*e^{i\theta_2}*e^{i\phi_2}*e^{i\theta_4}}*E_{i11}"/> (26) </center>
+
+
 
