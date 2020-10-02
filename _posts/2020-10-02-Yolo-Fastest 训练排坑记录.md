@@ -14,37 +14,37 @@ author: Zhenyu ZHAO
 
 ### Yolo-Fastest链接
 
-​       <a href="https://github.com/dog-qiuqiu/Yolo-Fastest"  target="opentype">https://github.com/dog-qiuqiu/Yolo-Fastest</a>
+ <a href="https://github.com/dog-qiuqiu/Yolo-Fastest"  target="opentype">https://github.com/dog-qiuqiu/Yolo-Fastest</a>
 
 ### 环境配置
 
-​        标准的darknet框架开发环境，只要支持Linux系统只要有C语言的编译环境就可以直接完成基于CPU进行计算的框架编译。
+标准的darknet框架开发环境，只要支持Linux系统只要有C语言的编译环境就可以直接完成基于CPU进行计算的框架编译。
 
-​        如果要用视频或摄像头进行测试，则需要先**编译安装**好OPENCV，之后在Makefile中使OPENCV=1。虽然不使用OPENCV也可以进行训练，但后期测试中总会用到OPENCV，所以建议装好后带OPENCV一起编译。
+如果要用视频或摄像头进行测试，则需要先**编译安装**好OPENCV，之后在Makefile中使OPENCV=1。虽然不使用OPENCV也可以进行训练，但后期测试中总会用到OPENCV，所以建议装好后带OPENCV一起编译。
 
-​        如果需要GPU加速计算，则需要先**安装Cuda和CuDNN**，并在Makefile中使GPU=1，并使CUDNN=1。同时将Makefile中的 
+如果需要GPU加速计算，则需要先**安装Cuda和CuDNN**，并在Makefile中使GPU=1，并使CUDNN=1。同时将Makefile中的 
 
 ```
 NVCC=nvcc
 ```
 
-​       改向系统中cuda路径下的nvcc，比如：
+改向系统中cuda路径下的nvcc，比如：
 
 ```
 NVCC=/usr/local/cuda-9.0/bin/nvcc
 ```
 
-​        如果有好一些的GPU，建议一定要使用GPU，亲测1080Ti比单纯运行在i7-1065G7上快上十几倍。
+如果有好一些的GPU，建议一定要使用GPU，亲测1080Ti比单纯运行在i7-1065G7上快上十几倍。
 
-​        轻推一个计算平台-易学智能 <a href="https://www.easyaiforum.cn/ "  target="opentype">https://www.easyaiforum.cn/</a>在1080Ti的配置下有darknet开发环境，不用安装opencv和cuda、cudnn，并且有窗口化操作界面。缺点是贵、上传下载速度慢、存储设计有些不合理。还算比较适合一些短时间的训练测试任务。
+轻推一个计算平台-易学智能 <a href="https://www.easyaiforum.cn/ "  target="opentype">https://www.easyaiforum.cn/</a>在1080Ti的配置下有darknet开发环境，不用安装opencv和cuda、cudnn，并且有窗口化操作界面。缺点是贵、上传下载速度慢、存储设计有些不合理。还算比较适合一些短时间的训练测试任务。
 
 ### 数据集准备
 
-​       （个人用的方法比较笨重，其实可以直接生成包含目标位置标注信息的txt文件，但没有测试过，所以只记录了笨重但可用的方法。 直接生成的方法可以考虑使用 LabelImg直接进行Yolo格式的标注。推一个朋友开源的视频标注程序 <a href="https://github.com/xinyang-go/VideoMarking"  target="opentype">https://github.com/xinyang-go/VideoMarking</a> ）
+（个人用的方法比较笨重，其实可以直接生成包含目标位置标注信息的txt文件，但没有测试过，所以只记录了笨重但可用的方法。 直接生成的方法可以考虑使用 LabelImg直接进行Yolo格式的标注。推一个朋友开源的视频标注程序 <a href="https://github.com/xinyang-go/VideoMarking"  target="opentype">https://github.com/xinyang-go/VideoMarking</a> ）
 
-​        假设已经准备好了一个文件夹的图片文件。（如果没有准备好，可以用手机录些视频，然后按帧提取出来）
+假设已经准备好了一个文件夹的图片文件。（如果没有准备好，可以用手机录些视频，然后按帧提取出来）
 
-​        那么可以开始以下步骤：
+那么可以开始以下步骤：
 
 1. 创建一个用于存放xml文件（将会存储图片中目标物的像素位置信息）的文件夹。
 
@@ -66,7 +66,7 @@ NVCC=/usr/local/cuda-9.0/bin/nvcc
 
    **完成"voc_label.py"的标注信息文件生成后，修改并使用修改后的maketxt.py来生成包含完整路径、名称的train.txt、trainval.txt**
 
-​        完成以上步骤后应该会有的必要东西应该为： 一个存有图片和包含目标标注信息txt文件的文件夹（见图2）（每张图片应该都有一个对应的txt!）、其中txt文件的内容示例如图3、一个train.txt文件（内容示例见图4）、一个trainval.txt文件（内容示例见图5）。
+完成以上步骤后应该会有的必要东西应该为： 一个存有图片和包含目标标注信息txt文件的文件夹（见图2）（每张图片应该都有一个对应的txt!）、其中txt文件的内容示例如图3、一个train.txt文件（内容示例见图4）、一个trainval.txt文件（内容示例见图5）。
 
 <center>    <img style="border-radius: 0.3125em;    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"     src="https://github.com/Hideousmon/Hideousmon.github.io/raw/master/_img/posts/Imagesdirectory.png"  height="270" width="450" >    <br>    <div style="color:orange; border-bottom: 1px solid #d9d9d9;    display: inline-block;    color: #999;    padding: 2px;">图2 图片及标注信息文件夹</div> </center>
 
@@ -78,7 +78,7 @@ NVCC=/usr/local/cuda-9.0/bin/nvcc
 
 ### 训练
 
-​        下面是比较具体的步骤：
+下面是比较具体的步骤：
 
    1. 建议将yolo-fastest.cfg、yolo-fastest.weights从 *Yolo-Fastest根目录/Yolo-Fastest/VOC/* 下各复制一份到  *Yolo-Fastest根目录*  下进行后续的修改。并将voc.data、voc.names从 *Yolo-Fastest根目录/data* 下各复制一份到 *Yolo-Fastest根目录*  下进行修改。这样后面可以直接在 *Yolo-Fastest根目录*  下执行作者给出的训练指令，否则这些指令中的文件应该加上路径。
 
@@ -195,43 +195,43 @@ NVCC=/usr/local/cuda-9.0/bin/nvcc
         ./darknet detector train voc.data yolo-fastest.cfg yolo-fastest.conv.109 
       ```
 
-​        训练中每1000代会在backup文件夹中生成一个权重文件，训练中的最新权重文件也会存储。 
+训练中每1000代会在backup文件夹中生成一个权重文件，训练中的最新权重文件也会存储。 
 
-​        在不改变作者设定的所有其他参数的条件下，个人用681张训练图片，75张验证图片标注一类目标做了简易测试，大概7000代左右达到了相对好的收敛效果，在1080Ti上约用了5小时左右。avg loss下降到了0.02左右。
+在不改变作者设定的所有其他参数的条件下，个人用681张训练图片，75张验证图片标注一类目标做了简易测试，大概7000代左右达到了相对好的收敛效果，在1080Ti上约用了5小时左右。avg loss下降到了0.02左右。
 
 ### 简易测试
 
-​        修改作者vidieo_yolov3.sh脚本中的各种配置文件、权重文件为训练后得到的权重文件后在树莓派4B上的推理效果：图6。因为数据集制作很差，所以没有做精确测试，可以参照作者的测试表格。
+修改作者vidieo_yolov3.sh脚本中的各种配置文件、权重文件为训练后得到的权重文件后在树莓派4B上的推理效果：图6。因为数据集制作很差，所以没有做精确测试，可以参照作者的测试表格。
 
  <center>    <img style="border-radius: 0.3125em;    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"     src="https://github.com/Hideousmon/Hideousmon.github.io/raw/master/_img/posts/Gun_without_NCNN.gif"  height="254" width="362" >    <br>    <div style="color:orange; border-bottom: 1px solid #d9d9d9;    display: inline-block;    color: #999;    padding: 2px;">图6 树莓派4B推理效果</div> </center>
 
 ### NCNN加速
 
-​        NCNN是腾讯开源的一款推理优化框架，Yolo-Fastest作者给出了一个效果示例 <a href="https://github.com/dog-qiuqiu/Yolo-Fastest/tree/master/ncnn_sample"  target="opentype">https://github.com/dog-qiuqiu/Yolo-Fastest/tree/master/ncnn_sample</a>
+ NCNN是腾讯开源的一款推理优化框架，Yolo-Fastest作者给出了一个效果示例 <a href="https://github.com/dog-qiuqiu/Yolo-Fastest/tree/master/ncnn_sample"  target="opentype">https://github.com/dog-qiuqiu/Yolo-Fastest/tree/master/ncnn_sample</a>
 
-​        **注意** README.md中的指示因为markdown 语言的特性显示的不完整，完整的指令应该是：
+**注意** README.md中的指示因为markdown 语言的特性显示的不完整，完整的指令应该是：
 
 ```
 g++ -o yolo-fastest yolo-fastest.cpp -I include/ncnn/ lib/libncnn.a `pkg-config --libs --cflags opencv` -fopenmp
 ```
 
-​       **注意** 如果使用的是OPENCV4.*，则应为：
+ **注意** 如果使用的是OPENCV4.*，则应为：
 
 ```
 g++ -o yolo-fastest yolo-fastest.cpp -I include/ncnn/ lib/libncnn.a `pkg-config --libs --cflags opencv4` -fopenmp
 ```
 
-​        执行上述语句之前，应该先编译安装ncnn <a href="https://github.com/Tencent/ncnn"  target="opentype">https://github.com/Tencent/ncnn</a>
+执行上述语句之前，应该先编译安装ncnn <a href="https://github.com/Tencent/ncnn"  target="opentype">https://github.com/Tencent/ncnn</a>
 
-​        **注意** 如果实在树莓派4B的ubuntu18.04 Mate系统上编译 因该依照 "Build for ARM Cortex-A family with cross-compiling"-》"AArch64 GNU/Linux target (aarch64-linux-gnu)"。
+ **注意** 如果实在树莓派4B的ubuntu18.04 Mate系统上编译 因该依照 "Build for ARM Cortex-A family with cross-compiling"-》"AArch64 GNU/Linux target (aarch64-linux-gnu)"。
 
-​        **编译后将build目录下的install文件夹中的include和lib复制到Yolo-Fastest中的ncnn_sample文件夹下**才能在ncnn_sample中正常执行上述指令。
+**编译后将build目录下的install文件夹中的include和lib复制到Yolo-Fastest中的ncnn_sample文件夹下**才能在ncnn_sample中正常执行上述指令。
 
-​        将自己训练后的网络转换参考<a href="https://github.com/Tencent/ncnn/tree/master/tools/darknet"  target="opentype">https://github.com/Tencent/ncnn/tree/master/tools/darknet</a>
+将自己训练后的网络转换参考<a href="https://github.com/Tencent/ncnn/tree/master/tools/darknet"  target="opentype">https://github.com/Tencent/ncnn/tree/master/tools/darknet</a>
 
-​        运行转换后的网络，可以参考作者给的示例。把yolo-fastest.cpp中的类别、网络路径改掉，编译就能正常运行，这里不作赘述了。
+运行转换后的网络，可以参考作者给的示例。把yolo-fastest.cpp中的类别、网络路径改掉，编译就能正常运行，这里不作赘述了。
 
-​        加速后的网络在树莓派4B上的推理效果如图7。
+加速后的网络在树莓派4B上的推理效果如图7。
 
 
 
