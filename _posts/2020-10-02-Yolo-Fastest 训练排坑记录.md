@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Yolo-Fastest 训练排坑记录"
-categories: CV
+categories: Object Detection
 tags: yolo-fastest
 author: Zhenyu ZHAO
 ---
@@ -223,7 +223,7 @@ g++ -o yolo-fastest yolo-fastest.cpp -I include/ncnn/ lib/libncnn.a `pkg-config 
 
 执行上述语句之前，应该先编译安装ncnn <a href="https://github.com/Tencent/ncnn"  target="opentype">https://github.com/Tencent/ncnn</a>
 
- **注意** 如果实在树莓派4B的ubuntu18.04 Mate系统上编译 因该依照 "Build for ARM Cortex-A family with cross-compiling"-》"AArch64 GNU/Linux target (aarch64-linux-gnu)"。
+ **注意** 如果是在树莓派的64位ubuntu Mate系统上编译 因该依照 "Build for ARM Cortex-A family with cross-compiling"-》"AArch64 GNU/Linux target (aarch64-linux-gnu)"。
 
 **编译后将build目录下的install文件夹中的include和lib复制到Yolo-Fastest中的ncnn_sample文件夹下**才能在ncnn_sample中正常执行上述指令。
 
