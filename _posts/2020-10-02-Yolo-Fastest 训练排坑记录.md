@@ -42,7 +42,7 @@ NVCC=/usr/local/cuda-9.0/bin/nvcc
 
 （个人用的方法比较笨重，其实可以直接生成包含目标位置标注信息的txt文件，但没有测试过，所以只记录了笨重但可用的方法。 直接生成的方法可以考虑使用 LabelImg直接进行Yolo格式的标注。推一个朋友开源的视频标注程序 <a href="https://github.com/xinyang-go/VideoMarking"  target="opentype">https://github.com/xinyang-go/VideoMarking</a> ）
 
-假设已经准备好了一个文件夹的图片文件。（如果没有准备好，可以用手机录些视频，然后按帧提取出来）
+假设已经准备好了一个文件夹的图片文件。（如果没有准备好，可以用录像设备录些视频，然后按帧提取出来）
 
 那么可以开始以下步骤：
 
@@ -56,11 +56,11 @@ NVCC=/usr/local/cuda-9.0/bin/nvcc
 
    <center>    <img style="border-radius: 0.3125em;    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"     src="https://github.com/Hideousmon/Hideousmon.github.io/raw/master/_img/posts/labelImg.PNG"  height="270" width="450" >    <br>    <div style="color:orange; border-bottom: 1px solid #d9d9d9;    display: inline-block;    color: #999;    padding: 2px;">图1 LabelImg标注</div> </center>
 
-5. 将完成标注后的文件夹放到Yolo-Fastest目录下。由于LabelImg生成的xml文件中的图片路径为绝对路径，所以放到新的位置后xml文件中的路径需要修改。可以参考<a href="https://www.jianshu.com/p/cf12bef0872c"  target="opentype">https://www.jianshu.com/p/cf12bef0872c</a>，将所有xml文件中的图片路径改成当前的图片路径（记住随便打开一个xml文件检查一下）。
+5. 将完成标注后的文件夹放到Yolo-Fastest目录下。由于LabelImg生成的xml文件中的图片路径为绝对路径，所以放到新的位置后xml文件中的路径需要修改。可以参考<a href="https://www.jianshu.com/p/cf12bef0872c"  target="opentype">https://www.jianshu.com/p/cf12bef0872c</a>，将所有xml文件中的图片路径改成当前的图片路径（记得随便打开一个xml文件检查一下）。
 
 6. **(这一步是需要改/写一些程序的)**生成训练用的图片目录文件train.txt（用于训练）、trainval.txt（用于训练过程中的验证）和Yolo读取的包含目标标注信息的txt文件。可以参考<a href="https://blog.csdn.net/hesongzefairy/article/details/107183162"  target="opentype">https://blog.csdn.net/hesongzefairy/article/details/107183162</a>，但是**需要注意的是**这个链接里的"maketxt.py"会生成四个txt文件，train.txt、trainval.txt、test.txt、val.txt，训练集一定要选用train.txt，如果数据集小验证集建议直接用trainval.txt（比例可以通过trainval_percent来调节，这两组是不相互重复的，如果需要测试，建议再做一些图片来做）。
 
-   **！而且 maketxt文件生成txt文件会只存储不包含路径和拓展名的图片名称，但训练中需要存储的是完整的路径(从Yolo-Fastest根目录开始的相对路径或绝对路径)、名称。**
+   **！而且 "maketxt.py"文件生成txt文件会只存储不包含路径和拓展名的图片名称，但训练中需要存储的是完整的路径(从Yolo-Fastest根目录开始的相对路径或绝对路径)、名称。**
 
    连接中的"voc_label.py"是用来在存储图片的文件夹中生成包含目标标注信息的txt文件的，它需要使用"maketxt.py"生成的txt文件，**注意**不仅要生成train.txt中包含的图片的标注信息**还要生成**验证集的trainval.txt中包含的标注信息。
 
