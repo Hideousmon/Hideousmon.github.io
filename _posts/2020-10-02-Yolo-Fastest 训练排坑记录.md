@@ -54,7 +54,7 @@ NVCC=/usr/local/cuda-9.0/bin/nvcc
 
 4. 使用LabelImg以PascalVOC格式进行标注。
 
-   <center>    <img style="border-radius: 0.3125em;    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"     src="https://github.com/Hideousmon/Hideousmon.github.io/raw/master/_img/posts/labelImg.png"  height="540" width="900" >    <br>    <div style="color:orange; border-bottom: 1px solid #d9d9d9;    display: inline-block;    color: #999;    padding: 2px;">图1 LabelImg标注</div> </center>
+   <center>    <img style="border-radius: 0.3125em;    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"     src="https://github.com/Hideousmon/Hideousmon.github.io/raw/master/_img/posts/labelImg.PNG"  height="270" width="450" >    <br>    <div style="color:orange; border-bottom: 1px solid #d9d9d9;    display: inline-block;    color: #999;    padding: 2px;">图1 LabelImg标注</div> </center>
 
 5. 将完成标注后的文件夹放到Yolo-Fastest目录下。由于LabelImg生成的xml文件中的图片路径为绝对路径，所以放到新的位置后xml文件中的路径需要修改。可以参考<a href="https://www.jianshu.com/p/cf12bef0872c"  target="opentype">https://www.jianshu.com/p/cf12bef0872c</a>，将所有xml文件中的图片路径改成当前的图片路径（记住随便打开一个xml文件检查一下）。
 
@@ -68,13 +68,13 @@ NVCC=/usr/local/cuda-9.0/bin/nvcc
 
 ​        完成以上步骤后应该会有的必要东西应该为： 一个存有图片和包含目标标注信息txt文件的文件夹（见图2）（每张图片应该都有一个对应的txt!）、其中txt文件的内容示例如图3、一个train.txt文件（内容示例见图4）、一个trainval.txt文件（内容示例见图5）。
 
-<center>    <img style="border-radius: 0.3125em;    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"     src="https://github.com/Hideousmon/Hideousmon.github.io/raw/master/_img/posts/Imagesdirectory.png"  height="540" width="900" >    <br>    <div style="color:orange; border-bottom: 1px solid #d9d9d9;    display: inline-block;    color: #999;    padding: 2px;">图2 图片及标注信息文件夹</div> </center>
+<center>    <img style="border-radius: 0.3125em;    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"     src="https://github.com/Hideousmon/Hideousmon.github.io/raw/master/_img/posts/Imagesdirectory.png"  height="270" width="450" >    <br>    <div style="color:orange; border-bottom: 1px solid #d9d9d9;    display: inline-block;    color: #999;    padding: 2px;">图2 图片及标注信息文件夹</div> </center>
 
- <center>    <img style="border-radius: 0.3125em;    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"     src="https://github.com/Hideousmon/Hideousmon.github.io/raw/master/_img/posts/txtmessage.png"  height="540" width="900" >    <br>    <div style="color:orange; border-bottom: 1px solid #d9d9d9;    display: inline-block;    color: #999;    padding: 2px;">图3 000000.txt中内容(一种目标)</div> </center>
+ <center>    <img style="border-radius: 0.3125em;    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"     src="https://github.com/Hideousmon/Hideousmon.github.io/raw/master/_img/posts/txtmessage.png"  height="270" width="450" >    <br>    <div style="color:orange; border-bottom: 1px solid #d9d9d9;    display: inline-block;    color: #999;    padding: 2px;">图3 000000.txt中内容(一种目标)</div> </center>
 
- <center>    <img style="border-radius: 0.3125em;    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"     src="https://github.com/Hideousmon/Hideousmon.github.io/raw/master/_img/posts/traintxt.png"  height="540" width="900" >    <br>    <div style="color:orange; border-bottom: 1px solid #d9d9d9;    display: inline-block;    color: #999;    padding: 2px;">图4 train.txt中内容</div> </center>
+ <center>    <img style="border-radius: 0.3125em;    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"     src="https://github.com/Hideousmon/Hideousmon.github.io/raw/master/_img/posts/traintxt.png"  height="270" width="450" >    <br>    <div style="color:orange; border-bottom: 1px solid #d9d9d9;    display: inline-block;    color: #999;    padding: 2px;">图4 train.txt中内容</div> </center>
 
- <center>    <img style="border-radius: 0.3125em;    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"     src="https://github.com/Hideousmon/Hideousmon.github.io/raw/master/_img/posts/trainvaltxt.png"  height="540" width="900" >    <br>    <div style="color:orange; border-bottom: 1px solid #d9d9d9;    display: inline-block;    color: #999;    padding: 2px;">图5 trainval.txt中内容</div> </center>
+ <center>    <img style="border-radius: 0.3125em;    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"     src="https://github.com/Hideousmon/Hideousmon.github.io/raw/master/_img/posts/trainvaltxt.png"  height="270" width="450" >    <br>    <div style="color:orange; border-bottom: 1px solid #d9d9d9;    display: inline-block;    color: #999;    padding: 2px;">图5 trainval.txt中内容</div> </center>
 
 ### 训练
 
@@ -203,7 +203,7 @@ NVCC=/usr/local/cuda-9.0/bin/nvcc
 
 ​        修改作者vidieo_yolov3.sh脚本中的各种配置文件、权重文件为训练后得到的权重文件后在树莓派4B上的推理效果：图6。因为数据集制作很差，所以没有做精确测试，可以参照作者的测试表格。
 
- <center>    <img style="border-radius: 0.3125em;    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"     src="https://github.com/Hideousmon/Hideousmon.github.io/raw/master/_img/posts/Gun_without_NCNN.gif"  height="508" width="724" >    <br>    <div style="color:orange; border-bottom: 1px solid #d9d9d9;    display: inline-block;    color: #999;    padding: 2px;">图6 树莓派4B推理效果</div> </center>
+ <center>    <img style="border-radius: 0.3125em;    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"     src="https://github.com/Hideousmon/Hideousmon.github.io/raw/master/_img/posts/Gun_without_NCNN.gif"  height="254" width="362" >    <br>    <div style="color:orange; border-bottom: 1px solid #d9d9d9;    display: inline-block;    color: #999;    padding: 2px;">图6 树莓派4B推理效果</div> </center>
 
 ### NCNN加速
 
@@ -235,7 +235,7 @@ g++ -o yolo-fastest yolo-fastest.cpp -I include/ncnn/ lib/libncnn.a `pkg-config 
 
 
 
- <center>    <img style="border-radius: 0.3125em;    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"     src="https://github.com/Hideousmon/Hideousmon.github.io/raw/master/_img/posts/Gun_with_NCNN.gif"  height="508" width="724" >    <br>    <div style="color:orange; border-bottom: 1px solid #d9d9d9;    display: inline-block;    color: #999;    padding: 2px;">图7 NCNN加速下的树莓派4B推理效果</div> </center>
+ <center>    <img style="border-radius: 0.3125em;    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"     src="https://github.com/Hideousmon/Hideousmon.github.io/raw/master/_img/posts/Gun_with_NCNN.gif"  height="254" width="362" >    <br>    <div style="color:orange; border-bottom: 1px solid #d9d9d9;    display: inline-block;    color: #999;    padding: 2px;">图7 NCNN加速下的树莓派4B推理效果</div> </center>
 
 
 
