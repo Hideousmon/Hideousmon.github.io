@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Yolo-Fastest 训练排坑记录"
-categories: Object Detection
+categories: Object-Detection
 tags: yolo-fastest
 author: Zhenyu ZHAO
 ---
