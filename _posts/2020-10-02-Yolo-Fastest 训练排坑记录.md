@@ -18,9 +18,9 @@ author: Zhenyu ZHAO
 
 ### 环境配置
 
-标准的darknet框架开发环境，只要Linux系统只要有C语言的编译环境就可以直接完成基于CPU进行计算的框架编译。
+标准的darknet框架开发环境，只要系统有C语言的编译环境就可以直接完成基于CPU进行计算的框架编译。在Linux系统下进行开发相对来说更方便一些(下文中的系统环境为Ubuntu 18.04)。
 
-如果要用视频或摄像头进行测试，则需要先**编译安装**好OPENCV，之后在Makefile中使OPENCV=1。虽然不使用OPENCV也可以进行训练，但后期测试中总会用到OPENCV，所以建议装好后带OPENCV一起编译。
+如果要用视频或摄像头进行测试，需要先**编译安装**好OPENCV，之后在Makefile中使OPENCV=1。虽然不使用OPENCV也可以进行训练，但后期测试中总会用到OPENCV，所以建议装好OPENCV后编译。
 
 如果需要GPU加速计算，则需要先**安装Cuda和CuDNN**，并在Makefile中使GPU=1，并使CUDNN=1。同时将Makefile中的 
 
