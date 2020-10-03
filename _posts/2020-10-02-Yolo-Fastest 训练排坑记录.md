@@ -18,7 +18,7 @@ author: Zhenyu ZHAO
 
 ### 环境配置
 
-标准的darknet框架开发环境，只要支持Linux系统只要有C语言的编译环境就可以直接完成基于CPU进行计算的框架编译。
+标准的darknet框架开发环境，只要Linux系统只要有C语言的编译环境就可以直接完成基于CPU进行计算的框架编译。
 
 如果要用视频或摄像头进行测试，则需要先**编译安装**好OPENCV，之后在Makefile中使OPENCV=1。虽然不使用OPENCV也可以进行训练，但后期测试中总会用到OPENCV，所以建议装好后带OPENCV一起编译。
 
@@ -62,11 +62,11 @@ NVCC=/usr/local/cuda-9.0/bin/nvcc
 
    **！而且 "maketxt.py"文件生成txt文件会只存储不包含路径和拓展名的图片名称，但训练中需要存储的是完整的路径(从Yolo-Fastest根目录开始的相对路径或绝对路径)、名称。**
 
-   连接中的"voc_label.py"是用来在存储图片的文件夹中生成包含目标标注信息的txt文件的，它需要使用"maketxt.py"生成的txt文件，**注意**不仅要生成train.txt中包含的图片的标注信息**还要生成**验证集的trainval.txt中包含的标注信息。
+   链接中的"voc_label.py"是用来在存储图片的文件夹中生成包含目标标注信息的txt文件的，它需要使用"maketxt.py"生成的txt文件，**注意**不仅要生成train.txt中包含的图片的标注信息**还要生成**验证集的trainval.txt中包含的标注信息。
 
    **完成"voc_label.py"的标注信息文件生成后，修改并使用修改后的maketxt.py来生成包含完整路径、名称的train.txt、trainval.txt**
 
-完成以上步骤后应该会有的必要东西应该为： 一个存有图片和包含目标标注信息txt文件的文件夹（见图2）（每张图片应该都有一个对应的txt!）、其中txt文件的内容示例如图3、一个train.txt文件（内容示例见图4）、一个trainval.txt文件（内容示例见图5）。
+完成以上步骤后应该会有的训练所需的必要东西为： 一个存有图片和包含目标标注信息txt文件的文件夹（见图2）（每张图片应该都有一个对应的txt!）、其中txt文件的内容示例如图3、一个train.txt文件（内容示例见图4）、一个trainval.txt文件（内容示例见图5）。
 
 <center>    <img style="border-radius: 0.3125em;    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"     src="https://github.com/Hideousmon/Hideousmon.github.io/raw/master/_img/posts/Imagesdirectory.png"  height="270" width="450" >    <br>    <div style="color:orange; border-bottom: 1px solid #d9d9d9;    display: inline-block;    color: #999;    padding: 2px;">图2 图片及标注信息文件夹</div> </center>
 
