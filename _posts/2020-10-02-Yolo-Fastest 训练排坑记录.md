@@ -201,7 +201,7 @@ NVCC=/usr/local/cuda-9.0/bin/nvcc
 
 ### 简易测试
 
-修改作者vidieo_yolov3.sh脚本中的各种配置文件、权重文件为训练后得到的权重文件后在树莓派4B上的推理效果：图6。因为数据集制作很差，所以没有做精确测试，可以参照作者的测试表格。
+修改作者video_yolov3.sh脚本中的各种配置文件、权重文件为训练后得到的权重文件后在树莓派4B上的推理效果：图6。因为数据集制作很差，所以没有做精确测试，可以参照作者的测试表格。
 
  <center>    <img style="border-radius: 0.3125em;    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"     src="https://github.com/Hideousmon/Hideousmon.github.io/raw/master/_img/posts/Gun_without_NCNN.gif"  height="254" width="362" >    <br>    <div style="color:orange; border-bottom: 1px solid #d9d9d9;    display: inline-block;    color: #999;    padding: 2px;">图6 树莓派4B推理效果</div> </center>
 
@@ -223,7 +223,7 @@ g++ -o yolo-fastest yolo-fastest.cpp -I include/ncnn/ lib/libncnn.a `pkg-config 
 
 执行上述语句之前，应该先编译安装ncnn <a href="https://github.com/Tencent/ncnn"  target="opentype">https://github.com/Tencent/ncnn</a>
 
- **注意** 如果是在树莓派的64位Ubuntu Mate系统上编译 因该依照 "Build for ARM Cortex-A family with cross-compiling"-》"AArch64 GNU/Linux target (aarch64-linux-gnu)"。
+ **注意** 如果是在树莓派的64位Ubuntu Mate系统上编译 应该依照 "Build for ARM Cortex-A family with cross-compiling"->"AArch64 GNU/Linux target (aarch64-linux-gnu)"。
 
 **编译后将build目录下的install文件夹中的include和lib复制到Yolo-Fastest中的ncnn_sample文件夹下**才能在ncnn_sample中正常执行上述指令。
 
