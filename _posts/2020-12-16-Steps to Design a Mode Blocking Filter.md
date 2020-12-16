@@ -10,6 +10,10 @@ author: Zhenyu ZHAO
 {:toc}
 
 
+
+
+
+
 ## Theory
 <center> <img src="http://latex.codecogs.com/gif.latex? n_{SWG}^2 = \delta*n_{Si}^2 + (1-\delta)*n_{Clad}^2"/>  <div align="right"> (1) </div>  </center>
 
