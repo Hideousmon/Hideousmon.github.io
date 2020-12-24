@@ -40,7 +40,7 @@ where:
 
 1. <div> <img src="http://latex.codecogs.com/gif.latex? n_{bus} "/> is known and can be derived from MODE simulation. </div>
 2. <div> decide  <img src="http://latex.codecogs.com/gif.latex?  \lambda "/> .</div>
-3. <div>decide side waveguide width, then <img src="http://latex.codecogs.com/gif.latex? n_{Si} "/>   and  <img src="http://latex.codecogs.com/gif.latex? n_{Clad} "/>   is decided, and can be derive from MODE. </div>  
+3. <div>decide side waveguide width, then <img src="http://latex.codecogs.com/gif.latex? n_{Si} "/>   and  <img src="http://latex.codecogs.com/gif.latex? n_{Clad} "/>   is decided, and can be derived from MODE. </div>  
 4. <div>select a <img src="http://latex.codecogs.com/gif.latex? \delta "/>   , then calculate  <img src="http://latex.codecogs.com/gif.latex? \Lambda "/>.  </div> 
 
 
