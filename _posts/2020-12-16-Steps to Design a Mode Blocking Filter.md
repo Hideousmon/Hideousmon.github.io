@@ -21,7 +21,7 @@ where:
 
 <div> <img src="http://latex.codecogs.com/gif.latex? \delta"/> is the duty cycle (Si Part). </div>
 
-<div> <img src="http://latex.codecogs.com/gif.latex? n_{Si} "/>   and  <img src="http://latex.codecogs.com/gif.latex? n_{Clad} "/>   can be derived from Lumerical Mode Simulation. </div>
+<div> <img src="http://latex.codecogs.com/gif.latex? n_{Si} "/>   and  <img src="http://latex.codecogs.com/gif.latex? n_{Clad} "/>   can be derived from Lumerical MODE Simulation. </div>
 
 Then, the phase matching condition:
 <center> <img src="http://latex.codecogs.com/gif.latex? n_{bus} + n_{SWG} = \frac{\lambda}{\Lambda}"/>  <div align="right"> (2) </div>  </center>
